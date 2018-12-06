@@ -17,13 +17,14 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
+
         return $this->render('default/index.html.twig');
     }
 
     /**
      * @Route("/create", name="create_user")
      * @Route("/edit/{id}", name="edit_user")
+     * Create and edit an user
      */
     public function createAction(Request $request, $id = null)
     {
@@ -73,6 +74,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/list", name="list_users")
+     * List all active users
      */
     public function listAction(Request $request)
     {
@@ -87,6 +89,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/delete/{id}", name="delete_user")
+     * Set the user as inactive instead of delete it
      */
     public function deleteAction(Request $request, $id)
     {
