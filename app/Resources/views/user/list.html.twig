@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>List Users</h1> 
+    <div>
+    	<table class="table">
+    		<thead>
+    			<tr>
+    				<th>Name</th>
+    				<th>Lastname</th>
+    				<th>Phone number</th>
+    				<th>Zipcode</th>
+    				<th>Company</th>
+    				<th></th>
+    				<th></th>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			{% if users is defined %}
+	    			{% for index, user in users %}
+						<tr>
+							<td>{{user.firstname}}</td>
+							<td>{{user.lastname}}</td>
+							<td>{{user.phone}}</td>
+							<td>{{user.zipcode}}</td>
+							<td>{{user.name}}</td>
+							<td><a href="{{path('edit_user', {id: user.id})}}"><i class="fas fa-edit"></i></a></td>
+							<td><a href="{{path('delete_user', {id: user.id})}}"><i class="fas fa-trash-alt"></i></a></td>
+						</tr>
+	    			{% endfor %}
+	    		{% endif %}
+    		</tbody>
+    	</table>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}

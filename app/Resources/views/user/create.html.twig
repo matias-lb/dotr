@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Create Users</h1> 
+    {% if error is defined %}
+    <div class="alert alert-danger">
+        {{error}}
+    </div>
+    {% endif %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
