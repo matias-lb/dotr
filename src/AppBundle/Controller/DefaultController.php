@@ -24,7 +24,7 @@ class DefaultController extends Controller
     /**
      * @Route("/create", name="create_user")
      * @Route("/edit/{id}", name="edit_user")
-     * Create and edit an user
+     * Create and edit an user.
      */
     public function createAction(Request $request, $id = null)
     {
